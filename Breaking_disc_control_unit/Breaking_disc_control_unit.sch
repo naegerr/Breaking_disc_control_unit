@@ -52,7 +52,7 @@ U 1 1 59EA47D0
 P 8350 3900
 F 0 "U1" H 4300 5800 81  0000 C CNN
 F 1 "MKW31Z256VHT4" H 11400 2100 157 0000 C CNB
-F 2 "Housings_DFN_QFN:QFN-48-1EP_7x7mm_Pitch0.5mm" H 4700 5850 60  0001 C CNN
+F 2 "Footprint_library:bdcu_QFN-48-1EP_7x7mm_Pitch0.5mm" H 4700 5850 60  0001 C CNN
 F 3 "" H 4700 5850 60  0001 C CNN
 	1    8350 3900
 	1    0    0    -1  
@@ -246,7 +246,7 @@ F 3 "" H 1750 9650 50  0001 C CNN
 $EndComp
 Text GLabel 2250 10600 2    60   BiDi ~ 0
 HALL_OUT
-Text Notes 500  9250 0    60   ~ 0
+Text Notes 500  9200 0    60   ~ 0
 C5 acap to VDD
 $Comp
 L MMA8452Q U3
@@ -522,7 +522,7 @@ Text Notes 7150 9350 0    60   ~ 12
 Altimeter
 Text Notes 3050 8800 0    60   ~ 12
 Acceleration sensor
-Text Notes 500  9050 0    60   ~ 12
+Text Notes 500  9000 0    60   ~ 12
 Halleffect sensor
 $Comp
 L Conn_02x05_Odd_Even J1
@@ -644,7 +644,7 @@ F 3 "" H 6650 7200 50  0001 C CNN
 	1    6650 7200
 	1    0    0    -1  
 $EndComp
-Text Notes 5500 7000 0    60   ~ 0
+Text Notes 4200 6700 0    60   ~ 0
 C12 acap to Pin1
 Text GLabel 3900 2900 0    60   BiDi ~ 0
 SWD_DIO
@@ -749,13 +749,13 @@ U 1 1 59EF4935
 P 13500 8500
 F 0 "U5" H 13200 9350 60  0000 C CNN
 F 1 "LTC3106" H 13350 7600 60  0000 C CNN
-F 2 "Housings_SSOP:TSSOP-20_4.4x6.5mm_Pitch0.65mm" H 14250 8100 60  0001 C CNN
+F 2 "Footprint_library:LTC3106_TSSOP-20_4.4x6.5mm_Pitch0.65mm" H 14250 8100 60  0001 C CNN
 F 3 "" H 14250 8100 60  0001 C CNN
 	1    13500 8500
 	1    0    0    -1  
 $EndComp
-Text Notes 9350 7300 0    60   ~ 0
-VSTORE & VCAP tied together, because no isolation is used\nENVSTR connecting to VSTORE to enable Backup source\nRUN connecting to VSTORE to set under voltage threshold\nC17 acap to VCC with low ESR capacitor\nSS1, SS2 connecting to VCC\nPRI connecting to GND -> backup source enabled\nOS1 = VCC, OS2 = GND-> output voltage = 3.3V\nC18 with low ESR and acap to VCAP, when leads long, 1x 47 to 100 uF low ESR + 1x 1uF ceramic\nL1 has to have low DCR and saturation current rating greater than highest typical peak currentlimit setting as in datasheet\nC16 acap to VAUX\nC19 100uF to reduce ripple on output voltage
+Text Notes 7950 7250 0    60   ~ 0
+VSTORE & VCAP tied together, because no isolation is used\nENVSTR connecting to VSTORE to enable Backup source\nRUN connecting to VSTORE to set under voltage threshold\nSS1, SS2 = VCC -> Lithium coin cell\nPRI connecting to GND -> backup source enabled\nOS1 = VCC, OS2 = GND-> output voltage = 3.3V\nL =22 uH -> more efficient in lower voltages\nC16 acap to VAUX\nC17 acap to VCC\nC18, C20 .. C24 acap to VSTORE / VIN, the smaller C closer
 $Comp
 L C C16
 U 1 1 59EF8D38
@@ -1094,8 +1094,6 @@ Wire Wire Line
 	6650 7550 6650 7750
 Connection ~ 6650 7650
 Wire Wire Line
-	6650 8050 6650 8250
-Wire Wire Line
 	7050 8150 7050 8250
 Wire Wire Line
 	6650 7200 6650 7250
@@ -1201,7 +1199,7 @@ Wire Wire Line
 Wire Wire Line
 	14100 8600 14350 8600
 Wire Wire Line
-	14350 8450 14350 9600
+	14350 8450 14350 9800
 Wire Wire Line
 	14350 8750 14100 8750
 Wire Wire Line
@@ -1227,9 +1225,9 @@ Connection ~ 12850 9200
 Wire Wire Line
 	12950 8900 12700 8900
 Wire Wire Line
-	12700 8900 12700 9600
+	12700 8900 12700 9800
 Wire Wire Line
-	12700 9600 14350 9600
+	12700 9800 14350 9800
 Connection ~ 14350 9050
 Wire Wire Line
 	11650 8600 12950 8600
@@ -1264,7 +1262,7 @@ Wire Wire Line
 Text GLabel 11650 8600 0    60   BiDi ~ 0
 VSOURCE
 $Comp
-L C C18
+L CP C18
 U 1 1 59F09B61
 P 12250 8050
 F 0 "C18" H 12275 8150 50  0000 L CNN
@@ -1292,7 +1290,7 @@ Wire Wire Line
 	12600 7900 12600 7850
 Connection ~ 12600 7850
 $Comp
-L C C19
+L CP C19
 U 1 1 59F0A544
 P 15400 8350
 F 0 "C19" H 15425 8450 50  0000 L CNN
@@ -1418,7 +1416,7 @@ Connection ~ 12250 7850
 Wire Wire Line
 	12250 8200 12250 8250
 $Comp
-L C C21
+L CP C21
 U 1 1 59EF444A
 P 12150 8850
 F 0 "C21" H 12175 8950 50  0000 L CNN
@@ -1474,7 +1472,7 @@ Wire Wire Line
 	12450 8700 12450 8600
 Connection ~ 12450 8600
 $Comp
-L C C23
+L CP C23
 U 1 1 59F256D4
 P 11800 8850
 F 0 "C23" H 11825 8950 50  0000 L CNN
@@ -1497,7 +1495,7 @@ F 3 "" H 11800 9100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C24
+L CP C24
 U 1 1 59F25ED1
 P 11900 8050
 F 0 "C24" H 11925 8150 50  0000 L CNN
@@ -1532,62 +1530,62 @@ Connection ~ 11800 8600
 $Comp
 L Conn_01x02 J3
 U 1 1 59F26C35
-P 8650 8000
-F 0 "J3" H 8650 7800 50  0000 C CNN
-F 1 "Conn_01x02" H 8700 8100 50  0000 C CNN
-F 2 "Connectors_JST:JST_PH_B2B-PH-K_02x2.00mm_Straight" H 8650 8000 50  0001 C CNN
-F 3 "" H 8650 8000 50  0001 C CNN
-	1    8650 8000
+P 8450 8550
+F 0 "J3" H 8450 8350 50  0000 C CNN
+F 1 "Conn_01x02" H 8500 8650 50  0000 C CNN
+F 2 "Connectors_JST:JST_PH_B2B-PH-K_02x2.00mm_Straight" H 8450 8550 50  0001 C CNN
+F 3 "" H 8450 8550 50  0001 C CNN
+	1    8450 8550
 	-1   0    0    1   
 $EndComp
-Text GLabel 9250 7900 2    60   BiDi ~ 0
+Text GLabel 9050 8450 2    60   BiDi ~ 0
 VSOURCE
 $Comp
 L GND #PWR040
 U 1 1 59F27070
-P 8900 8050
-F 0 "#PWR040" H 8900 7800 50  0001 C CNN
-F 1 "GND" H 8900 7900 50  0000 C CNN
-F 2 "" H 8900 8050 50  0001 C CNN
-F 3 "" H 8900 8050 50  0001 C CNN
-	1    8900 8050
+P 8700 8600
+F 0 "#PWR040" H 8700 8350 50  0001 C CNN
+F 1 "GND" H 8700 8450 50  0000 C CNN
+F 2 "" H 8700 8600 50  0001 C CNN
+F 3 "" H 8700 8600 50  0001 C CNN
+	1    8700 8600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8850 8000 8900 8000
+	8650 8550 8700 8550
 Wire Wire Line
-	8900 8000 8900 8050
+	8700 8550 8700 8600
 Wire Wire Line
-	8850 7900 9250 7900
+	8650 8450 9050 8450
 $Comp
 L C C25
 U 1 1 59F27C2D
-P 9150 8100
-F 0 "C25" H 9175 8200 50  0000 L CNN
-F 1 "DNP" H 9175 8000 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 9188 7950 50  0001 C CNN
-F 3 "" H 9150 8100 50  0001 C CNN
-F 4 "Low ESR ceramic" H 9150 8100 60  0001 C CNN "Info"
-	1    9150 8100
+P 8950 8650
+F 0 "C25" H 8975 8750 50  0000 L CNN
+F 1 "DNP" H 8975 8550 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 8988 8500 50  0001 C CNN
+F 3 "" H 8950 8650 50  0001 C CNN
+F 4 "Low ESR ceramic" H 8950 8650 60  0001 C CNN "Info"
+	1    8950 8650
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR041
 U 1 1 59F27DA5
-P 9150 8300
-F 0 "#PWR041" H 9150 8050 50  0001 C CNN
-F 1 "GND" H 9150 8150 50  0000 C CNN
-F 2 "" H 9150 8300 50  0001 C CNN
-F 3 "" H 9150 8300 50  0001 C CNN
-	1    9150 8300
+P 8950 8850
+F 0 "#PWR041" H 8950 8600 50  0001 C CNN
+F 1 "GND" H 8950 8700 50  0000 C CNN
+F 2 "" H 8950 8850 50  0001 C CNN
+F 3 "" H 8950 8850 50  0001 C CNN
+	1    8950 8850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9150 8300 9150 8250
+	8950 8850 8950 8800
 Wire Wire Line
-	9150 7950 9150 7900
-Connection ~ 9150 7900
-Text Notes 8450 7750 0    60   ~ 0
+	8950 8500 8950 8450
+Connection ~ 8950 8450
+Text Notes 8200 8100 0    60   ~ 0
 DNP if J3 close to C23, C21, C22\notherwise C25 acap to Pin2 with 100 uF
 Wire Wire Line
 	5300 7050 5300 7250
@@ -1602,7 +1600,7 @@ F 3 "" H 4600 7050 50  0001 C CNN
 	1    4600 7050
 	1    0    0    -1  
 $EndComp
-Text Notes 8450 7550 0    60   ~ 0
+Text Notes 8200 8250 0    60   ~ 0
 Input voltage 0.37V...6V
 $Comp
 L C C26
@@ -2034,9 +2032,9 @@ Wire Wire Line
 	1550 7600 1450 7600
 Text GLabel 12650 3500 2    60   BiDi ~ 0
 SM_AIN1/AP
-Text GLabel 12650 3400 2    60   BiDi ~ 0
-SM_AIN2/AENBL
 Text GLabel 12650 3300 2    60   BiDi ~ 0
+SM_AIN2/AENBL
+Text GLabel 12650 3400 2    60   BiDi ~ 0
 SM_BIN1/BP
 Text GLabel 12650 3200 2    60   BiDi ~ 0
 SM_BIN2/BENBL
@@ -2241,4 +2239,21 @@ F 3 "" H 14250 5150 50  0001 C CNN
 $EndComp
 Text Notes 14200 4600 2    60   ~ 0
 50 Ohm controlled impedance line
+Wire Wire Line
+	6650 8050 6650 8250
+$Comp
+L GND #PWR061
+U 1 1 59F9DCBE
+P 13600 9600
+F 0 "#PWR061" H 13600 9350 50  0001 C CNN
+F 1 "GND" H 13600 9450 50  0000 C CNN
+F 2 "" H 13600 9600 50  0001 C CNN
+F 3 "" H 13600 9600 50  0001 C CNN
+	1    13600 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13600 9600 13600 9550
+Text Notes 12750 5450 0    60   ~ 0
+Take a look at schematic of USB Dongle KW41Z
 $EndSCHEMATC
