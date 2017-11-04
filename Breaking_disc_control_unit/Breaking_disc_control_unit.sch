@@ -170,9 +170,9 @@ F 3 "" H 8600 1550 50  0001 C CNN
 	1    8600 1550
 	1    0    0    -1  
 $EndComp
-Text GLabel 3900 4850 0    60   BiDi ~ 0
+Text GLabel 3900 4850 0    60   Input ~ 0
 XTAL_32MHZ
-Text GLabel 3900 4950 0    60   BiDi ~ 0
+Text GLabel 3900 4950 0    60   Input ~ 0
 EXTAL_32MHZ
 $Comp
 L TLV4964 U2
@@ -230,7 +230,7 @@ F 3 "" H 1750 9650 50  0001 C CNN
 	1    1750 9650
 	1    0    0    -1  
 $EndComp
-Text GLabel 2250 10600 2    60   BiDi ~ 0
+Text GLabel 2250 10600 2    60   Output ~ 0
 HALL_OUT
 Text Notes 500  9250 0    60   ~ 0
 C5 acap to VDD
@@ -364,9 +364,9 @@ F 3 "" H 5400 10750 50  0001 C CNN
 $EndComp
 Text Notes 3800 11050 0    60   ~ 0
 SA0: Connected to GND -> I2C 7-bit address: 0x1C
-Text GLabel 6300 9850 2    60   BiDi ~ 0
+Text GLabel 6300 9850 2    60   Output ~ 0
 I2C_INT_11
-Text GLabel 6300 10350 2    60   BiDi ~ 0
+Text GLabel 6300 10350 2    60   Output ~ 0
 I2C_INT_12
 Text GLabel 2800 3800 0    60   BiDi ~ 0
 I2C_SCL
@@ -416,11 +416,11 @@ F 3 "" H 2900 3400 50  0001 C CNN
 	1    2900 3400
 	1    0    0    -1  
 $EndComp
-Text GLabel 3900 4000 0    60   BiDi ~ 0
+Text GLabel 3900 4000 0    60   Input ~ 0
 I2C_INT_11
-Text GLabel 3900 4100 0    60   BiDi ~ 0
+Text GLabel 3900 4100 0    60   Input ~ 0
 I2C_INT_12
-Text GLabel 12650 2900 2    60   BiDi ~ 0
+Text GLabel 12650 2900 2    60   Output ~ 0
 HALL_OUT
 $Comp
 L C C9
@@ -494,13 +494,13 @@ Text GLabel 9750 9900 2    60   BiDi ~ 0
 I2C_SCL
 Text GLabel 9750 10150 2    60   BiDi ~ 0
 I2C_SDA
-Text GLabel 9750 10650 2    60   BiDi ~ 0
+Text GLabel 9750 10650 2    60   Output ~ 0
 I2C_INT_22
-Text GLabel 9750 10400 2    60   BiDi ~ 0
+Text GLabel 9750 10400 2    60   Output ~ 0
 I2C_INT_21
-Text GLabel 12650 3700 2    60   BiDi ~ 0
+Text GLabel 12650 3700 2    60   Input ~ 0
 I2C_INT_21
-Text GLabel 12650 3800 2    60   BiDi ~ 0
+Text GLabel 12650 3800 2    60   Input ~ 0
 I2C_INT_22
 Text Notes 7150 9600 0    60   ~ 0
 C9 acap to VDD\nC10 acap to VDD
@@ -543,7 +543,7 @@ F 3 "" H 5350 7700 50  0001 C CNN
 	1    5350 7700
 	1    0    0    -1  
 $EndComp
-Text GLabel 5350 7550 0    60   BiDi ~ 0
+Text GLabel 5350 7550 0    60   Output ~ 0
 UART0_RX
 $Comp
 L GND #PWR020
@@ -556,9 +556,9 @@ F 3 "" H 4600 7450 50  0001 C CNN
 	1    4600 7450
 	1    0    0    -1  
 $EndComp
-Text GLabel 5950 7550 2    60   BiDi ~ 0
+Text GLabel 5950 7550 2    60   Input ~ 0
 UART0_TX
-Text GLabel 7250 7650 2    60   BiDi ~ 0
+Text GLabel 7250 7650 2    60   Output ~ 0
 RESET
 Text GLabel 5950 7350 2    60   BiDi ~ 0
 SWD_CLK
@@ -636,11 +636,11 @@ Text GLabel 3900 2900 0    60   BiDi ~ 0
 SWD_DIO
 Text GLabel 3900 3000 0    60   BiDi ~ 0
 SWD_CLK
-Text GLabel 3900 3100 0    60   BiDi ~ 0
+Text GLabel 3900 3100 0    60   Input ~ 0
 RESET
-Text GLabel 12650 3100 2    60   BiDi ~ 0
+Text GLabel 12650 3100 2    60   Output ~ 0
 UART0_TX
-Text GLabel 12650 3000 2    60   BiDi ~ 0
+Text GLabel 12650 3000 2    60   Input ~ 0
 UART0_RX
 $Comp
 L Conn_02x03_Odd_Even J2
@@ -675,25 +675,25 @@ F 3 "" H 14400 900 50  0001 C CNN
 	1    14400 900 
 	1    0    0    -1  
 $EndComp
-Text GLabel 14350 1550 0    60   BiDi ~ 0
-SPI_SOUT_EXT
-Text GLabel 14350 1650 0    60   BiDi ~ 0
-SPI_SIN_EXT
-Text GLabel 15050 1650 2    60   BiDi ~ 0
-SPI_SCK_EXT
-Text GLabel 15050 1550 2    60   BiDi ~ 0
-SPI_PCS0_EXT
-Text GLabel 3900 3200 0    60   BiDi ~ 0
+Text GLabel 14350 1550 0    60   Input ~ 0
 SPI1_SOUT_EXT
-Text GLabel 3900 3300 0    60   BiDi ~ 0
+Text GLabel 14350 1650 0    60   Output ~ 0
 SPI1_SIN_EXT
-Text GLabel 3900 3400 0    60   BiDi ~ 0
+Text GLabel 15050 1650 2    60   Input ~ 0
 SPI1_SCK_EXT
-Text GLabel 3900 3500 0    60   BiDi ~ 0
+Text GLabel 15050 1550 2    60   Input ~ 0
 SPI1_PCS0_EXT
-Text GLabel 1350 1850 0    60   BiDi ~ 0
+Text GLabel 3900 3200 0    60   Output ~ 0
+SPI1_SOUT_EXT
+Text GLabel 3900 3300 0    60   Input ~ 0
+SPI1_SIN_EXT
+Text GLabel 3900 3400 0    60   Output ~ 0
+SPI1_SCK_EXT
+Text GLabel 3900 3500 0    60   Output ~ 0
+SPI1_PCS0_EXT
+Text GLabel 1350 1850 0    60   Output ~ 0
 EXTAL_32MHZ
-Text GLabel 1350 2350 0    60   BiDi ~ 0
+Text GLabel 1350 2350 0    60   Output ~ 0
 XTAL_32MHZ
 $Comp
 L Crystal_Small Y1
@@ -706,9 +706,9 @@ F 3 "" H 1550 2100 50  0001 C CNN
 	1    1550 2100
 	0    1    1    0   
 $EndComp
-Text GLabel 1350 1000 0    60   Input ~ 0
+Text GLabel 1350 1000 0    60   Output ~ 0
 XTAL_32KHZ
-Text GLabel 1350 1500 0    60   Input ~ 0
+Text GLabel 1350 1500 0    60   Output ~ 0
 EXTAL_32KHZ
 $Comp
 L Crystal_Small Y2
@@ -721,9 +721,9 @@ F 3 "" H 1550 1250 50  0001 C CNN
 	1    1550 1250
 	0    1    1    0   
 $EndComp
-Text GLabel 3900 4200 0    60   BiDi ~ 0
+Text GLabel 3900 4200 0    60   Input ~ 0
 EXTAL_32KHZ
-Text GLabel 3900 4300 0    60   BiDi ~ 0
+Text GLabel 3900 4300 0    60   Input ~ 0
 XTAL_32KHZ
 Text Notes 650  1750 0    60   ~ 0
 CL = 10 pF
@@ -911,10 +911,7 @@ Wire Wire Line
 Connection ~ 7600 1650
 Connection ~ 7800 1650
 Wire Wire Line
-	8200 1650 8200 1850
-Wire Wire Line
 	8400 1350 8400 1850
-Connection ~ 8200 1650
 Connection ~ 8400 1650
 Wire Wire Line
 	3900 4850 4000 4850
@@ -1230,7 +1227,7 @@ F 3 "" H 14600 9350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	14600 9350 14600 9100
-Text GLabel 11650 8600 0    60   BiDi ~ 0
+Text GLabel 11650 8600 0    60   Input ~ 0
 VSOURCE
 $Comp
 L CP C18
@@ -1509,7 +1506,7 @@ F 3 "" H 8650 8000 50  0001 C CNN
 	1    8650 8000
 	-1   0    0    1   
 $EndComp
-Text GLabel 9250 7900 2    60   BiDi ~ 0
+Text GLabel 9250 7900 2    60   Output ~ 0
 VSOURCE
 $Comp
 L GND #PWR040
@@ -1731,7 +1728,7 @@ U 1 1 59F4B797
 P 15800 4450
 F 0 "AE1" H 15725 4525 50  0000 R CNN
 F 1 "MIFA" H 15725 4450 50  0000 R CNN
-F 2 "RF_Antennas:Texas_SWRA117D_2.4GHz_Right" H 15800 4450 50  0001 C CNN
+F 2 "Footprint_library:IFA" H 15800 4450 50  0001 C CNN
 F 3 "" H 15800 4450 50  0001 C CNN
 	1    15800 4450
 	1    0    0    -1  
@@ -1784,7 +1781,7 @@ F 3 "" H 11050 10950 50  0001 C CNN
 	1    11050 10950
 	1    0    0    -1  
 $EndComp
-Text GLabel 11050 10050 1    60   BiDi ~ 0
+Text GLabel 11050 10050 1    60   Input ~ 0
 LED
 Wire Wire Line
 	11050 10850 11050 10950
@@ -1792,7 +1789,7 @@ Wire Wire Line
 	11050 10550 11050 10450
 Wire Wire Line
 	11050 10150 11050 10050
-Text GLabel 3900 4400 0    60   BiDi ~ 0
+Text GLabel 3900 4400 0    60   Output ~ 0
 LED
 $Comp
 L DRV8835 U6
@@ -1971,15 +1968,15 @@ Wire Wire Line
 	3100 7000 2850 7000
 Wire Wire Line
 	2850 7000 2850 7050
-Text GLabel 1450 7600 0    60   BiDi ~ 0
+Text GLabel 1450 7600 0    60   Input ~ 0
 SM_AIN1/AP
-Text GLabel 1450 7700 0    60   BiDi ~ 0
+Text GLabel 1450 7700 0    60   Input ~ 0
 SM_AIN2/AENBL
-Text GLabel 1450 7850 0    60   BiDi ~ 0
+Text GLabel 1450 7850 0    60   Input ~ 0
 SM_BIN1/BP
-Text GLabel 1450 7950 0    60   BiDi ~ 0
+Text GLabel 1450 7950 0    60   Input ~ 0
 SM_BIN2/BENBL
-Text GLabel 1450 8100 0    60   BiDi ~ 0
+Text GLabel 1450 8100 0    60   Input ~ 0
 SM_MODE
 Wire Wire Line
 	1550 8100 1450 8100
@@ -1991,13 +1988,13 @@ Wire Wire Line
 	1450 7700 1550 7700
 Wire Wire Line
 	1550 7600 1450 7600
-Text GLabel 12650 3500 2    60   BiDi ~ 0
+Text GLabel 12650 3500 2    60   Output ~ 0
 SM_AIN1/AP
-Text GLabel 12650 3300 2    60   BiDi ~ 0
+Text GLabel 12650 3300 2    60   Output ~ 0
 SM_AIN2/AENBL
-Text GLabel 12650 3400 2    60   BiDi ~ 0
+Text GLabel 12650 3400 2    60   Output ~ 0
 SM_BIN1/BP
-Text GLabel 12650 3200 2    60   BiDi ~ 0
+Text GLabel 12650 3200 2    60   Output ~ 0
 SM_BIN2/BENBL
 Wire Wire Line
 	12550 2900 12650 2900
@@ -2021,7 +2018,7 @@ Wire Wire Line
 	12650 3900 12550 3900
 Wire Wire Line
 	12550 3700 12650 3700
-Text GLabel 12650 3900 2    60   BiDi ~ 0
+Text GLabel 12650 3900 2    60   Input ~ 0
 SM_MODE
 Wire Wire Line
 	12550 3800 12650 3800
@@ -2121,11 +2118,11 @@ F 3 "" H 700 6100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	700  6050 700  6100
-Text GLabel 1500 5500 0    60   BiDi ~ 0
+Text GLabel 1500 5500 0    60   Input ~ 0
 PWM_SERVO
 Wire Wire Line
 	700  5600 1600 5600
-Text GLabel 12650 3600 2    60   BiDi ~ 0
+Text GLabel 12650 3600 2    60   Output ~ 0
 PWM_SERVO
 Wire Wire Line
 	12550 3600 12650 3600
@@ -2340,4 +2337,22 @@ Wire Wire Line
 	15450 5050 15450 5150
 Text Notes 13950 4650 0    60   ~ 0
 50 Ohm controlled\nimpedance line
+NoConn ~ 12950 8750
+NoConn ~ 5600 10650
+NoConn ~ 5400 9050
+NoConn ~ 5200 9050
+NoConn ~ 4650 9850
+NoConn ~ 6150 9450
+NoConn ~ 5900 7450
+NoConn ~ 5400 7450
+NoConn ~ 4000 5150
+NoConn ~ 4000 5250
+NoConn ~ 8450 6150
+NoConn ~ 12550 4400
+NoConn ~ 12550 4300
+NoConn ~ 4000 4650
+NoConn ~ 10100 8350
+Wire Wire Line
+	8200 1850 8200 1650
+Connection ~ 8200 1650
 $EndSCHEMATC
