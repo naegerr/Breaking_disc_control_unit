@@ -695,17 +695,6 @@ Text GLabel 1350 1850 0    60   Output ~ 0
 EXTAL_32MHZ
 Text GLabel 1350 2350 0    60   Output ~ 0
 XTAL_32MHZ
-$Comp
-L Crystal_Small Y1
-U 1 1 59EE81AB
-P 1550 2100
-F 0 "Y1" H 1550 2200 50  0000 C CNN
-F 1 "32MHz" H 1550 2000 50  0000 C CNN
-F 2 "Crystals:Crystal_SMD_Abracon_ABM8G-4pin_3.2x2.5mm" H 1550 2100 50  0001 C CNN
-F 3 "" H 1550 2100 50  0001 C CNN
-	1    1550 2100
-	0    1    1    0   
-$EndComp
 Text GLabel 1350 1000 0    60   Output ~ 0
 XTAL_32KHZ
 Text GLabel 1350 1500 0    60   Output ~ 0
@@ -739,7 +728,7 @@ F 3 "" H 14250 8100 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 9350 7300 0    60   ~ 0
-VSTORE & VCAP tied together, because no isolation is used\nENVSTR connecting to VSTORE to enable Backup source\nRUN connecting to VSTORE to set under voltage threshold\nC17 acap to VCC with low ESR capacitor\nSS1, SS2 connecting to VCC\nPRI connecting to GND -> backup source enabled\nOS1 = VCC, OS2 = GND-> output voltage = 3.3V\nC18 with low ESR and acap to VCAP, when leads long, 1x 47 to 100 uF low ESR + 1x 1uF ceramic\nL1 has to have low DCR and saturation current rating greater than highest typical peak currentlimit setting as in datasheet\nC16 acap to VAUX\nC19 100uF to reduce ripple on output voltage
+VSTORE & VCAP tied together, because no isolation is used\nENVSTR connecting to VSTORE to enable Backup source\nRUN connecting to VSTORE to set under voltage threshold\nC17 acap to VCC with low ESR capacitor\nSS1, SS2 connecting to VCC\nPRI connecting to GND -> backup source enabled\nOS1 = VCC, OS2 = GND-> output voltage = 3.3V\nC20 and C22 acap to VSTORE / VIN\nL1 has to have low DCR and saturation current rating greater than highest typical peak currentlimit setting as in datasheet\nC16 acap to VAUX\nC19 100uF to reduce ripple on output voltage
 $Comp
 L C C16
 U 1 1 59EF8D38
@@ -1119,11 +1108,7 @@ Wire Wire Line
 Wire Wire Line
 	12550 3000 12650 3000
 Wire Wire Line
-	1550 2000 1550 1850
-Wire Wire Line
 	1350 1850 1700 1850
-Wire Wire Line
-	1550 2200 1550 2350
 Wire Wire Line
 	1350 2350 1700 2350
 Wire Wire Line
@@ -1498,13 +1483,13 @@ Connection ~ 11800 8600
 $Comp
 L Conn_01x02 J3
 U 1 1 59F26C35
-P 8650 8000
-F 0 "J3" H 8650 7800 50  0000 C CNN
-F 1 "Conn_01x02" H 8700 8100 50  0000 C CNN
-F 2 "Connectors_JST:JST_PH_B2B-PH-K_02x2.00mm_Straight" H 8650 8000 50  0001 C CNN
-F 3 "" H 8650 8000 50  0001 C CNN
-	1    8650 8000
-	-1   0    0    1   
+P 8650 7900
+F 0 "J3" H 8650 7700 50  0000 C CNN
+F 1 "Conn_01x02" H 8700 8000 50  0000 C CNN
+F 2 "Connectors_JST:JST_PH_B2B-PH-K_02x2.00mm_Straight" H 8650 7900 50  0001 C CNN
+F 3 "" H 8650 7900 50  0001 C CNN
+	1    8650 7900
+	-1   0    0    -1  
 $EndComp
 Text GLabel 9250 7900 2    60   Output ~ 0
 VSOURCE
@@ -1615,7 +1600,7 @@ Wire Wire Line
 Wire Wire Line
 	2100 1850 2000 1850
 Wire Wire Line
-	2200 2100 2100 2100
+	1750 2100 2200 2100
 Connection ~ 2100 2100
 $Comp
 L C C28
@@ -2351,8 +2336,35 @@ NoConn ~ 8450 6150
 NoConn ~ 12550 4400
 NoConn ~ 12550 4300
 NoConn ~ 4000 4650
-NoConn ~ 10100 8350
 Wire Wire Line
 	8200 1850 8200 1650
 Connection ~ 8200 1650
+$Comp
+L Crystal_GND24 Y1
+U 1 1 59FEEFC8
+P 1550 2100
+F 0 "Y1" H 1675 2300 50  0000 L CNN
+F 1 "Crystal_GND24" H 1675 2225 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_Abracon_ABM8G-4pin_3.2x2.5mm" H 1550 2100 50  0001 C CNN
+F 3 "" H 1550 2100 50  0001 C CNN
+	1    1550 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 2350 1550 2250
+Wire Wire Line
+	1550 1950 1550 1850
+$Comp
+L GND #PWR065
+U 1 1 59FEFA7A
+P 1250 2100
+F 0 "#PWR065" H 1250 1850 50  0001 C CNN
+F 1 "GND" H 1250 1950 50  0000 C CNN
+F 2 "" H 1250 2100 50  0001 C CNN
+F 3 "" H 1250 2100 50  0001 C CNN
+	1    1250 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 2100 1250 2100
 $EndSCHEMATC
