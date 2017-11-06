@@ -1650,7 +1650,7 @@ Wire Wire Line
 Connection ~ 2100 1250
 Text Notes 700  900  0    60   ~ 0
 CL = 12.5 pF
-Text Notes 12600 4300 0    60   ~ 0
+Text Notes 13050 4400 0    60   ~ 0
 50 Ohm impedance matching\nReference Design from USB KW41Z\n
 Text Notes 4200 6500 0    60   ~ 12
 Debug interface
@@ -2334,7 +2334,6 @@ NoConn ~ 4000 5150
 NoConn ~ 4000 5250
 NoConn ~ 8450 6150
 NoConn ~ 12550 4400
-NoConn ~ 12550 4300
 NoConn ~ 4000 4650
 Wire Wire Line
 	8200 1850 8200 1650
@@ -2367,4 +2366,19 @@ F 3 "" H 1250 2100 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1350 2100 1250 2100
+$Comp
+L +BATT #PWR066
+U 1 1 5A006034
+P 12750 4250
+F 0 "#PWR066" H 12750 4100 50  0001 C CNN
+F 1 "+BATT" H 12750 4390 50  0000 C CNN
+F 2 "" H 12750 4250 50  0001 C CNN
+F 3 "" H 12750 4250 50  0001 C CNN
+	1    12750 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12750 4250 12750 4300
+Wire Wire Line
+	12750 4300 12550 4300
 $EndSCHEMATC
