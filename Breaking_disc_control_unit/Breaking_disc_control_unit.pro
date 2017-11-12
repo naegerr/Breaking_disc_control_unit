@@ -1,4 +1,4 @@
-update=08/11/2017 07:12:38
+update=12/11/2017 14:32:31
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,7 +64,7 @@ version=1
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=../../../../../../HSLU/7. Semester/BDA/Documentation/Pictures/Schematic/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
