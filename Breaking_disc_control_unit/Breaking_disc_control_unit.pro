@@ -1,4 +1,4 @@
-update=20/11/2017 08:54:14
+update=07/12/2017 08:23:55
 version=1
 last_client=kicad
 [cvpcb]
@@ -6,16 +6,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=../../../../../../HSLU/7. Semester/BDA/Documentation/Pictures/Schematic/
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -72,3 +62,13 @@ LibName30=opto
 LibName31=atmel
 LibName32=contrib
 LibName33=valves
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=../../../../../../HSLU/7. Semester/BDA/Documentation/Pictures/Schematic/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
