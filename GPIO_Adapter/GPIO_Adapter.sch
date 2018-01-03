@@ -1,0 +1,229 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "GPIO Adapter"
+Date "2018-01-03"
+Rev "V1.0"
+Comp ""
+Comment1 "Robert Näger"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L GND #PWR?
+U 1 1 5A4C88E1
+P 5350 3050
+F 0 "#PWR?" H 5350 2800 50  0001 C CNN
+F 1 "GND" H 5350 2900 50  0000 C CNN
+F 2 "" H 5350 3050 50  0001 C CNN
+F 3 "" H 5350 3050 50  0001 C CNN
+	1    5350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3V3 #PWR?
+U 1 1 5A4C88F7
+P 4400 2750
+F 0 "#PWR?" H 4400 2600 50  0001 C CNN
+F 1 "+3V3" H 4400 2890 50  0000 C CNN
+F 2 "" H 4400 2750 50  0001 C CNN
+F 3 "" H 4400 2750 50  0001 C CNN
+	1    4400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3050 4600 3050
+Wire Wire Line
+	4400 2750 4400 3050
+$Comp
+L Conn_02x03_Odd_Even J1
+U 1 1 5A4C8926
+P 4800 3150
+F 0 "J1" H 4850 3350 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 4850 2950 50  0000 C CNN
+F 2 "" H 4800 3150 50  0001 C CNN
+F 3 "" H 4800 3150 50  0001 C CNN
+	1    4800 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3050 5200 3050
+Wire Wire Line
+	5200 3050 5300 3050
+Wire Wire Line
+	5300 3050 5350 3050
+$Comp
+L SW_Push SW1
+U 1 1 5A4C8978
+P 3900 3550
+F 0 "SW1" H 3950 3650 50  0000 L CNN
+F 1 "SW_Push" H 3900 3490 50  0000 C CNN
+F 2 "" H 3900 3750 50  0001 C CNN
+F 3 "" H 3900 3750 50  0001 C CNN
+	1    3900 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A4C8A38
+P 3900 4050
+F 0 "#PWR?" H 3900 3800 50  0001 C CNN
+F 1 "GND" H 3900 3900 50  0000 C CNN
+F 2 "" H 3900 4050 50  0001 C CNN
+F 3 "" H 3900 4050 50  0001 C CNN
+	1    3900 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 4050 3900 3750
+Wire Wire Line
+	4600 3150 3900 3150
+Wire Wire Line
+	3900 3100 3900 3150
+Wire Wire Line
+	3900 3150 3900 3350
+$Comp
+L R R1
+U 1 1 5A4C8A80
+P 3900 2950
+F 0 "R1" V 3980 2950 50  0000 C CNN
+F 1 "10k" V 3900 2950 50  0000 C CNN
+F 2 "" V 3830 2950 50  0001 C CNN
+F 3 "" H 3900 2950 50  0001 C CNN
+	1    3900 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 3900 3150
+$Comp
+L +3V3 #PWR?
+U 1 1 5A4C8B03
+P 3900 2750
+F 0 "#PWR?" H 3900 2600 50  0001 C CNN
+F 1 "+3V3" H 3900 2890 50  0000 C CNN
+F 2 "" H 3900 2750 50  0001 C CNN
+F 3 "" H 3900 2750 50  0001 C CNN
+	1    3900 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2750 3900 2800
+NoConn ~ 5100 3150
+$Comp
+L LED D1
+U 1 1 5A4C8B2D
+P 4300 3500
+F 0 "D1" H 4300 3600 50  0000 C CNN
+F 1 "GREEN" H 4300 3400 50  0000 C CNN
+F 2 "" H 4300 3500 50  0001 C CNN
+F 3 "" H 4300 3500 50  0001 C CNN
+	1    4300 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED D2
+U 1 1 5A4C8B96
+P 5400 3500
+F 0 "D2" H 5400 3600 50  0000 C CNN
+F 1 "RED" H 5400 3400 50  0000 C CNN
+F 2 "" H 5400 3500 50  0001 C CNN
+F 3 "" H 5400 3500 50  0001 C CNN
+	1    5400 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5A4C8C9E
+P 4300 3850
+F 0 "R2" V 4380 3850 50  0000 C CNN
+F 1 "68" V 4300 3850 50  0000 C CNN
+F 2 "" V 4230 3850 50  0001 C CNN
+F 3 "" H 4300 3850 50  0001 C CNN
+	1    4300 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5A4C8D00
+P 5400 3850
+F 0 "R3" V 5480 3850 50  0000 C CNN
+F 1 "68" V 5400 3850 50  0000 C CNN
+F 2 "" V 5330 3850 50  0001 C CNN
+F 3 "" H 5400 3850 50  0001 C CNN
+	1    5400 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A4C8EA2
+P 4300 4050
+F 0 "#PWR?" H 4300 3800 50  0001 C CNN
+F 1 "GND" H 4300 3900 50  0000 C CNN
+F 2 "" H 4300 4050 50  0001 C CNN
+F 3 "" H 4300 4050 50  0001 C CNN
+	1    4300 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A4C8EC2
+P 5400 4050
+F 0 "#PWR?" H 5400 3800 50  0001 C CNN
+F 1 "GND" H 5400 3900 50  0000 C CNN
+F 2 "" H 5400 4050 50  0001 C CNN
+F 3 "" H 5400 4050 50  0001 C CNN
+	1    5400 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 3350 5400 3250
+Wire Wire Line
+	5400 3250 5100 3250
+Wire Wire Line
+	5400 3650 5400 3700
+Wire Wire Line
+	5400 4000 5400 4050
+Wire Wire Line
+	4300 4050 4300 4000
+Wire Wire Line
+	4300 3700 4300 3650
+Wire Wire Line
+	4300 3350 4300 3250
+Wire Wire Line
+	4300 3250 4600 3250
+$EndSCHEMATC

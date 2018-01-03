@@ -1,4 +1,4 @@
-update=07/12/2017 08:23:55
+update=03/01/2018 10:04:00
 version=1
 last_client=kicad
 [cvpcb]
@@ -65,7 +65,7 @@ LibName33=valves
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=../../../../../../HSLU/7. Semester/BDA/Documentation/Pictures/Schematic/
+PlotDirectoryName=../../../../../../HSLU/7. Semester/BDA/Documentation/Pictures/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
